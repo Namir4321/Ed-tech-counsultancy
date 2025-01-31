@@ -24,6 +24,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
         password: {},
       },
       async authorize(credentials) {
+        console.log(credentials)
         try {
           const user = await db.profile.findUnique({
             where: { email: credentials.email },
@@ -44,6 +45,7 @@ export const { handlers, signIn, signOut, auth } = NextAuth({
             email: user.email,
           };
         } catch (err) {
+          console.log(err)
           throw new Error(err.message);
         }
       },

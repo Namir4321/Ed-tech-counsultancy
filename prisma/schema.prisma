@@ -11,6 +11,7 @@ generator client {
 datasource db {
   provider = "postgresql"
   url      = env("DATABASE_URL")
+  directUrl = env("DIRECT_URL")
 }
 
 model Profile {
@@ -18,4 +19,56 @@ model Profile {
   name     String
   email    String @unique
   password String
+}
+
+model Submission {
+  id              String     @id @default(uuid())
+  type            UserType
+  fullname        String
+  email           String     @unique
+  phone           String
+  college         String?
+  course          String[]
+  country         String?
+  website         String?
+  status          StatusFrom @default(review)
+  // Fields for "mentor" type
+  resume          String?
+  // Fields for "institutions" type
+  institutionName String?
+  languageCourses String?
+  fees            String?
+  publish         Boolean    @default(false)
+  description     String?
+  createdAt       DateTime   @default(now())
+  updatedAt       DateTime   @updatedAt
+  callback        callback?
+}
+
+model callback {
+  id           String     @id @default(uuid())
+  submission   Submission @relation(fields: [submissionId], references: [id])
+  submissionId String     @unique
+  fullname     String
+  phone        String
+  email        String     
+  course       String
+  date         DateTime
+  description  String
+  time         String
+  createdAt    DateTime   @default(now())
+  updatedAt    DateTime   @updatedAt
+}
+
+enum StatusFrom {
+  review
+  completed
+}
+
+enum UserType {
+  partner
+  mentor
+  institution
+  bussines_mentor
+  study_visa_mentor
 }

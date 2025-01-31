@@ -8,20 +8,12 @@ const initialState = {
 const FormContainer = ({ action, children }) => {
   const [state, formAction] = useActionState(action, initialState);
   const { toast } = useToast();
-  const formRef = useRef(null);
   useEffect(() => {
     if (state.message) {
       toast({ description: state.message });
-      if (formRef.current) {
-        formRef.current.reset();
-      }
     }
   }, [state]);
-  return (
-    <form action={formAction} ref={formRef}>
-      {children}
-    </form>
-  );
+  return <form action={formAction}>{children}</form>;
 };
 
 export default FormContainer;

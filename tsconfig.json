@@ -22,6 +22,6 @@
       "@/*": ["./src/*"]
     }
   },
-  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts"],
+  "include": ["next-env.d.ts", "**/*.ts", "**/*.tsx", ".next/types/**/*.ts", "src/components/Callback/CallbackForm.tsx", "src/components/Callback/Calander.tsx", "src/components/ui/MentorCard.tsx", "src/app/page.jsx", "src/app/(user)/layout.tsx"],
   "exclude": ["node_modules"]
 }
