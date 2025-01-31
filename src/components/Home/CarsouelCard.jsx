@@ -11,7 +11,7 @@ import RoleCard from "./RoleCard";
 
 const CarsouelCard = () => {
   return (
-    <div className="bg-white  py-8 px-24">
+    <div className="bg-white  py-8 md:px-24 px-6">
       <Carousel opts={{ align: "start", loop: true }}>
         <CarouselContent className="flex">
           {[

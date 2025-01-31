@@ -72,7 +72,7 @@ export const callbackFormSchema = z.object({
   submissionId: z.string().uuid("Invalid Submission ID format"),
   email: z.string().email("Invalid email address"),
 
-  course: z.string().min(5, "Course name must be at least 5 characters long"),
+  course: z.string().min(2, "Course name must be at least 5 characters long"),
 
   date: z.string().refine((val) => !isNaN(Date.parse(val)), {
     message: "Invalid date format",

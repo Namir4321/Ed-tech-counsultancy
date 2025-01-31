@@ -49,23 +49,23 @@ export default async function Home() {
           </p>
         </div>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 py-12 text-left">
-        <div className="flex flex-col justify-center items-center h-full px-12">
-          <h1 className="text-xl md:px-12 font-bold text-left md:text-3xl">
+      <div className="grid grid-cols-1 mt-6 mb-6 md:grid-cols-2 md:py-12 text-left">
+        <div className="flex flex-col justify-center items-center h-full md:px-12">
+          <h1 className="text-xl px-6 mb-2 md:px-12 font-bold text-left md:text-3xl">
             Join 1000+ Businesses using TeachEdison
           </h1>
-          <p className="px-12 text-left">
+          <p className="px-6 md:px-12 text-left">
             Focus on your business while we handle the complexities of
             engineering. Become one of us by joining thousands of our happy
             entrepreneurs and facilitating your customers' online learning
             experience. Know More
           </p>
-          <div className="flex  w-full md:px-12">
+          <div className="flex px-6 mb-6 w-full md:px-12">
             <Button className="mt-2">Know more</Button>
           </div>
         </div>
 
-        <div className="flex justify-center items-center h-full w-full">
+        <div className="flex mb-6 px-6 md:px-0 justify-center items-center h-full w-full">
           <video
             src="/backvideo.mp4"
             autoPlay
@@ -77,9 +77,9 @@ export default async function Home() {
         </div>
       </div>
       <CarsouelCard />
-      <div className="flex flex-col bg-black md:flex-row px-24 justify-between items-center">
+      <div className="flex flex-col bg-black md:flex-row md:px-24 pt-6 px-4  md:mt-0 justify-between items-center">
         <div className="">
-          <h1 className="md:text-5xl text-white">
+          <h1 className="md:text-5xl text-2xl text-white">
             What problem can we help your{" "}
           </h1>
           <p className="text-white pr-6">
