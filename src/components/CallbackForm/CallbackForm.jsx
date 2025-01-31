@@ -17,7 +17,7 @@ const CallbackForm = () => {
     <Dialog>
       <DialogTrigger className="bg-black text-white px-4 py-1 rounded">
         {/* {addtype} */}
-        Join Us
+        Join us
       </DialogTrigger>
       <DialogContent>
         <DialogHeader>
